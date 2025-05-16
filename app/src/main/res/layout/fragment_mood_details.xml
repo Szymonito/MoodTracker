@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MoodDetailsFragment">
+    tools:context=".fragments.MoodDetailsFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#595757"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/mood_details_emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":0"
+        android:textSize="150sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/mood_details_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brak opisu"
+        android:textSize="20sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/mood_details_feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domyslnie"
+        android:textSize="25sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/mood_details_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domyslny typ"
+        android:textSize="15sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/mood_details_statements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domyslny opis"
+        android:textSize="15sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/mood_details_importance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:maxWidth="300dp"
+        android:layout_margin="10dp"
+        />
+
+    <RatingBar
+        android:id="@+id/mood_details_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:isIndicator="true"
+        android:layout_margin="30dp"
+        />
+
+    <Button
+        android:id="@+id/mood_details_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usun moje uczucia!"
+        android:layout_margin="20dp"
+        />
+
+
+
+
+
+</LinearLayout>
