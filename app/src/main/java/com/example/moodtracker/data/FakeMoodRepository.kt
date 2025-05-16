@@ -1,13 +1,13 @@
 package com.example.moodtracker.data
 
 object FakeMoodRepository {
-    val moodList = mutableListOf<Mood>()
+    val moodList = mutableListOf<MoodEntry>()
 
-    fun addMood(entry: Mood){
+    fun addMood(entry: MoodEntry){
         moodList.add(0, entry)
     }
 
-    fun removeMood(entry: Mood){
+    fun removeMood(entry: MoodEntry){
         moodList.remove(entry)
     }
 }
