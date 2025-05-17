@@ -1,14 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MoodEntryFragment">
+    tools:context=".fragments.MoodEntryFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#27DED4"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/mood_entry_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:lines="3"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
 
+    <RadioGroup
+        android:id="@+id/mood_entry_feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zadowolony"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moze byc"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smutny"
+            />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/mood_entry_category"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        />
+
+    <CheckBox
+        android:id="@+id/mood_entry_checked_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dzisiaj był dobry dzień!"
+        />
+
+    <CheckBox
+        android:id="@+id/mood_entry_checked_two"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="to był dzien pelen wrazen"
+        />
+
+    <CheckBox
+        android:id="@+id/mood_entry_checked_three"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:text="Chce o tym dniu jak najszybciej zapomniec"
+        />
+
+    <RatingBar
+        android:id="@+id/mood_entry_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:numStars="5"
+        android:stepSize=".5"
+        android:layout_gravity="center"
+        />
+
+    <Switch
+        android:id="@+id/mood_entry_importance"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Czy twój dzien był wazny?"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/mood_entry_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz moj dzien"
+        android:layout_gravity="center"
+        />
 </FrameLayout>
