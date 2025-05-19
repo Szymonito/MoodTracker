@@ -29,18 +29,21 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="zadowolony"
+            android:text="Zadowolony"
+            android:background="@color/white"
             />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Moze byc"
+            android:background="@color/black"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Smutny"
+            android:background="@color/black"
             />
     </RadioGroup>
 

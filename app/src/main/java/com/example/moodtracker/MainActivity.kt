@@ -57,5 +57,23 @@ class MainActivity : AppCompatActivity() {
         return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item)
     }
 
-    fun setToolbarBackgroundColor(feeling: String)
+    fun setToolbarBackgroundColor(feeling: String) {
+        val color = when (feeling) {
+            "Zadowolony" -> ContextCompat.getColor(this, R.color.white)
+            "Moze byc" -> ContextCompat.getColor(this, R.color.black)
+            "Smutny" -> ContextCompat.getColor(this, R.color.black)
+            else ("Nie ma nic do pokazania")
+        }
+        toolbar.setBackgroundColor(color)
+    }
+
+    fun resetToolbarBackgroundColor(){
+        val typedValue = TypedValue()
+        theme.resolveAttribute(androidx.appcompat.R.attr.colorError, typedValue, true)
+        if (typedValue.type >= TypedValue.TYPE_FIRST_COLOR_INT && typedValue.type <= TypedValue.TYPE_LAST_COLOR_INT) {
+            toolbar.setBackgroundColor(typedValue.data)
+        } else {
+            android.util.Log.e("MainActivity", "Color nies jest czescia risorsuw")
+        }
+    }
 }
