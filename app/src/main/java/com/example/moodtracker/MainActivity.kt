@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             "Zadowolony" -> ContextCompat.getColor(this, R.color.white)
             "Moze byc" -> ContextCompat.getColor(this, R.color.black)
             "Smutny" -> ContextCompat.getColor(this, R.color.black)
-            else ("Nie ma nic do pokazania")
+            else -> ContextCompat.getColor(this, androidx.cardview.R.color.cardview_shadow_end_color)
         }
         toolbar.setBackgroundColor(color)
     }
