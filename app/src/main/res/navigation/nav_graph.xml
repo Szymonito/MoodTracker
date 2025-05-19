@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moodHistoryFragment">
 
+    <fragment
+        android:id="@+id/moodDetailsFragment"
+        android:name="com.example.moodtracker.fragments.MoodDetailsFragment"
+        android:label="Detale"
+        tools:layout="@layout/fragment_mood_details"
+        >
+        <argument
+            android:name="mood"
+            app:argType="com.example.moodtracker.data.Mood"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodHistoryFragment"
+        android:name="com.example.moodtracker.fragments.MoodHistoryFragment"
+        android:label="Historia"
+        tools:layout="@layout/fragment_mood_history"
+        >
+
+        <action
+            android:id="@+id/moodHistoryFragment_to_moodDetailsFragment"
+            app:destination="@+id/moodDetailsFragment">
+
+            <argument
+                android:name="mood"
+                app:argType="com.example.moodtracker.data.Mood"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.moodtracker.fragments.SettingFragment"
+        android:label="Ustawienia"
+        tools:layout="@layout/fragment_setting"
+        />
 </navigation>
