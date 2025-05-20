@@ -21,6 +21,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.moodtracker.R
 import com.example.moodtracker.data.FakeMoodRepository
 import com.example.moodtracker.data.MoodEntry
+import androidx.appcompat.widget.SwitchCompat
 
 
 class MoodEntryFragment : Fragment() {
@@ -45,7 +46,7 @@ class MoodEntryFragment : Fragment() {
         val checkTwoCheckBox: CheckBox = view.findViewById(R.id.mood_entry_checked_two)
         val checkThreeCheckBox: CheckBox = view.findViewById(R.id.mood_entry_checked_three)
         val ratingBar: RatingBar = view.findViewById(R.id.mood_entry_rating)
-        val importanceSwitch: Switch = view.findViewById(R.id.mood_entry_importance)
+        val importanceSwitch: SwitchCompat = view.findViewById(R.id.mood_entry_importance)
         val saveButton: Button = view.findViewById(R.id.mood_entry_save)
 
         val adapter = ArrayAdapter(
@@ -54,7 +55,7 @@ class MoodEntryFragment : Fragment() {
             events
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        CategorySpinner.adapter = adapter
+        categorySpinner.adapter = adapter
 
         saveButton.setOnClickListener{
             val description = nameEditText.text.toString().trim()
@@ -79,7 +80,7 @@ class MoodEntryFragment : Fragment() {
             if(checkTwoCheckBox.isChecked){
                 statements.add(checkTwoCheckBox.text.toString())
             }
-            if(checkThreeCheckBoxx.isChecked){
+            if(checkThreeCheckBox.isChecked){
                 statements.add(checkThreeCheckBox.text.toString())
             }
 
@@ -87,7 +88,7 @@ class MoodEntryFragment : Fragment() {
 
             val importance = importanceSwitch.isChecked
 
-            val moodEntry = Mood(
+            val moodEntry = MoodEntry(
                 description = description,
                 feeling = feeling,
                 type = type,
@@ -98,8 +99,11 @@ class MoodEntryFragment : Fragment() {
 
             Log.d("data", moodEntry.toString())
             FakeMoodRepository.addMood(moodEntry)
-            findNavController().navigate(R.id.action_moodEntryFragment_to_moodHistory_Fragment)
+            findNavController().navigate(R.id.action_moodEntryFragment_to_moodHistoryFragment)
         }
     }
 
 }
+
+
+

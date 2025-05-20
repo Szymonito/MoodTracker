@@ -35,6 +35,10 @@ class MoodDetailsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_mood_details, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val moodDescTextView: TextView = view.findViewById(R.id.mood_details_desc)
         val moodFeelTextView: TextView = view.findViewById(R.id.mood_details_feeling)
@@ -87,5 +91,10 @@ class MoodDetailsFragment : Fragment() {
         if (activity is MainActivity) {
             (requireActivity() as MainActivity).resetToolbarBackgroundColor()
         }
+
     }
-}
+    }
+
+
+
+

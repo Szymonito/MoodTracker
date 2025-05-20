@@ -13,7 +13,22 @@
         >
         <argument
             android:name="mood"
-            app:argType="com.example.moodtracker.data.Mood"
+            app:argType="com.example.moodtracker.data.MoodEntry"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodEntryFragment"
+        android:name="com.example.moodtracker.fragments.MoodEntryFragment"
+        android:label="Entry"
+        tools:layout="@layout/fragment_mood_entry"
+        >
+
+        <action
+            android:id="@+id/action_moodEntryFragment_to_moodHistoryFragment"
+            app:destination="@+id/moodHistoryFragment"
+            app:popUpTo="@id/moodHistoryFragment"
+            app:popUpToInclusive="false"
             />
     </fragment>
 
@@ -30,7 +45,7 @@
 
             <argument
                 android:name="mood"
-                app:argType="com.example.moodtracker.data.Mood"/>
+                app:argType="com.example.moodtracker.data.MoodEntry"/>
         </action>
     </fragment>
 
