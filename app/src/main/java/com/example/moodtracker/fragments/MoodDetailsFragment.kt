@@ -19,7 +19,7 @@ import org.w3c.dom.Text
 
 class MoodDetailsFragment : Fragment() {
 
-    private var moodDesc: String? = null
+    private var mooodDesc: String? = null
     private var moodFeel: String? = null
     private var moodType: String? = null
     private var moodStatements: MutableList<String>? = null

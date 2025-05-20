@@ -2,4 +2,17 @@
     <string name="app_name">MoodTracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
+
+    <string name="feeling_happy">Zadowolony</string>
+    <string name="feeling_ok">Moze byc</string>
+    <string name="feeling_sad">Smutny</string>
+    <string name="checkbox_good_day">Dzisiaj był dobry dzień!</string>
+    <string name="checkbox_exciting_day">to był dzien pelen wrazen</string>
+    <string name="checkbox_forget_day">Chce o tym dniu jak najszybciej zapomniec</string>
+    <string name="switch_important_day">Czy twój dzien był wazny?</string>
+    <string name="button_save">Zapisz moj dzien</string>
 </resources>

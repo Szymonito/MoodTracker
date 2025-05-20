@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+
+
+    <color name="Zadowolony">#DC0DF2</color>
+    <color name="Moze_byc">#081E61</color>
+    <color name="Smutny">#2F1A1A</color>
 </resources>

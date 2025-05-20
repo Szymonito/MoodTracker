@@ -31,7 +31,7 @@ import com.example.moodtracker.R
             recyclerView = view.findViewById(R.id.recycler_view_moods)
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-            //val moodList = FakeMoodRepositorry.moodList
+            //val moodList = FakeMoodRepository.moodList
             adapter = MoodAdapter(mutableListOf(), this)
             recyclerView.adapter = adapter
         }

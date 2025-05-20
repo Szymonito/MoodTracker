@@ -1,6 +1,5 @@
 package com.example.moodtracker.fragments
 
-import android.media.Rating
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,7 +14,6 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.RatingBar
 import android.widget.Spinner
-import android.widget.Switch
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.moodtracker.R
@@ -61,7 +59,7 @@ class MoodEntryFragment : Fragment() {
             val description = nameEditText.text.toString().trim()
 
             if(description.isEmpty()){
-                Toast.makeText(requireContext(), "Twoj opis nie moze byc pusty", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(), "Twoj opis nie moze byc pusty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
             val selectedFeelingId = feelRadioGroup.checkedRadioButtonId

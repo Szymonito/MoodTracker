@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,20 +29,20 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zadowolony"
+            android:text="@string/feeling_happy"
             android:background="@color/white"
             />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moze byc"
+            android:text="@string/feeling_ok"
             android:background="@color/black"
             />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Smutny"
+            android:text="@string/feeling_sad"
             android:background="@color/black"
             />
     </RadioGroup>
@@ -58,21 +58,21 @@
         android:id="@+id/mood_entry_checked_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dzisiaj był dobry dzień!"
+        android:text="@string/checkbox_good_day"
         />
 
     <CheckBox
         android:id="@+id/mood_entry_checked_two"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:text="to był dzien pelen wrazen"
+        android:text="@string/checkbox_exciting_day"
         />
 
     <CheckBox
         android:id="@+id/mood_entry_checked_three"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:text="Chce o tym dniu jak najszybciej zapomniec"
+        android:text="@string/checkbox_forget_day"
         />
 
     <RatingBar
@@ -88,7 +88,7 @@
         android:id="@+id/mood_entry_importance"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:text="Czy twój dzien był wazny?"
+        android:text="@string/switch_important_day"
         android:layout_gravity="center"
         />
 
@@ -96,7 +96,7 @@
         android:id="@+id/mood_entry_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zapisz moj dzien"
+        android:text="@string/button_save"
         android:layout_gravity="center"
         />
-</FrameLayout>
+</LinearLayout>
