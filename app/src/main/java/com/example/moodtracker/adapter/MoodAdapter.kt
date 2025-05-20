@@ -1,17 +1,17 @@
 package com.example.moodtracker.adapter
 
-import android.os.Bundle
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
+
 import android.widget.LinearLayout
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moodtracker.R
 import com.example.moodtracker.data.MoodEntry
-import com.google.android.ads.mediationtestsuite.viewmodels.ItemViewHolder
+
 
 class MoodAdapter (
     val itemList: MutableList<MoodEntry>,

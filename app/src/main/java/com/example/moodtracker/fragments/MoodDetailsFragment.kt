@@ -14,7 +14,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.moodtracker.MainActivity
 import com.example.moodtracker.R
 import com.example.moodtracker.data.FakeMoodRepository
-import org.w3c.dom.Text
+
 
 
 class MoodDetailsFragment : Fragment() {
@@ -93,7 +93,7 @@ class MoodDetailsFragment : Fragment() {
         }
 
     }
-    }
+}
 
 
 
